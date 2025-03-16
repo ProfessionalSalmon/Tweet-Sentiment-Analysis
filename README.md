@@ -4,7 +4,7 @@ This project focuses on analyzing the sentiment of tweets using Natural Language
 
 ## 🧸Dataset
 The dataset consists of tweets with labeled sentiment categories. Each entry typically includes:
--Text: The actual tweet content
+- Text: The actual tweet content
 - Sentiment Label: Categorical labels (0 = Negative, 1 = Neutral, 2 = Positive)
 
 ## 🧸Model Architecture
