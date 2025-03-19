@@ -13,7 +13,7 @@ The dataset consists of tweets with labeled sentiment categories. Each entry typ
 ## 🧸Model Architecture
 This project analyzes the sentiment of tweets using two different models:
 
-**1. Deep Learning Model (PyTorch-based Text Classifier)**
+**1. PyTorch-based Text Classifier**
   - **Embedding Layer**: `nn.EmbeddingBag` to handle word embeddings efficiently
   - **Dropout Layer**: Prevents overfitting by randomly dropping activations
   - **Fully Connected Layer**: Maps the extracted features to sentiment classes
@@ -22,3 +22,7 @@ This project analyzes the sentiment of tweets using two different models:
 **2. VADER (Valence Aware Dictionary and sEntiment Reasoner) – A rule-based sentiment analysis tool**
   - **Model**: `nltk.sentiment.vader.SentimentIntensityAnalyzer`
   - **Hyperparameter Tuning**: Positive/Negative Threshold
+
+**3. TensorFlow-based Text Classifier**
+  - **Embedding Layer**: Pre-trained Universal Sentence Encoder from TensorFlow Hub for embedding text into 512-dimensional vectors
+  - **Fully Connected Layer**: Maps the extracted features to sentiment classes
