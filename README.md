@@ -24,8 +24,9 @@ This project analyzes the sentiment of tweets using two different models:
   - **Hyperparameter Tuning**: Positive/Negative Threshold
 
 **3. TensorFlow-based Text Classifier**
-  - **Embedding Layer**: Pre-trained Universal Sentence Encoder from TensorFlow Hub for embedding text into 512-dimensional vectors
-  - **Fully Connected Layer**: Maps the extracted features to sentiment classes
+  - **Input**: Sequences of 100 shorted/padded tokenized words
+  - **Embedding Layer**: Converts tokens into 128-dimensional dense vectors
+  - **Global Average Pooling**
 
 **4. CardiffNLP's `twitter-roberta-base-sentiment-latest model`**
   - Built with Hugging Face’s `pipeline("text-classification")`
