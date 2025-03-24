@@ -28,5 +28,9 @@ This project analyzes the sentiment of tweets using two different models:
   - **Embedding Layer**: Converts tokens into 128-dimensional dense vectors
   - **Global Average Pooling**
 
-**4. CardiffNLP's `twitter-roberta-base-sentiment-latest model`**
+**4. CardiffNLP's** `twitter-roberta-base-sentiment-latest model`
   - Built with Hugging Face’s `pipeline("text-classification")`
+
+**5. **BERT Mini** (`prajjwal1/bert-mini`)
+  - Built with Hugging Face's `AutoModelForSequenceClassification` and `AutoTokenizer`
+  - Fine-tune the model with training data
