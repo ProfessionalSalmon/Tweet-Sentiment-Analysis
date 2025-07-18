@@ -13,24 +13,23 @@ The dataset consists of tweets with labeled sentiment categories. Each entry typ
 ## 🧸Model Architecture
 This project analyzes the sentiment of tweets using two different models:
 
-**1. PyTorch-based Text Classifier**
+**1. CardiffNLP's** `twitter-roberta-base-sentiment-latest model`
+  - Built with Hugging Face’s `pipeline("text-classification")`
+
+**2. BERT Mini** (`prajjwal1/bert-mini`)
+  - Built with Hugging Face's `AutoModelForSequenceClassification` and `AutoTokenizer`
+
+**3. VADER (Valence Aware Dictionary and sEntiment Reasoner) – A rule-based sentiment analysis tool**
+  - **Model**: `nltk.sentiment.vader.SentimentIntensityAnalyzer`
+  - **Hyperparameter Tuning**: Positive/Negative Threshold
+
+**4. PyTorch-based Text Classifier**
   - **Embedding Layer**: `nn.EmbeddingBag` to handle word embeddings efficiently
   - **Dropout Layer**: Prevents overfitting by randomly dropping activations
   - **Fully Connected Layer**: Maps the extracted features to sentiment classes
   - **Weight Initialization**: Custom initialization for embeddings and linear layers
     
-**2. VADER (Valence Aware Dictionary and sEntiment Reasoner) – A rule-based sentiment analysis tool**
-  - **Model**: `nltk.sentiment.vader.SentimentIntensityAnalyzer`
-  - **Hyperparameter Tuning**: Positive/Negative Threshold
-
-**3. TensorFlow-based Text Classifier**
+**5. TensorFlow-based Text Classifier**
   - **Input**: Sequences of 100 shorted/padded tokenized words
   - **Embedding Layer**: Converts tokens into 128-dimensional dense vectors
   - **Global Average Pooling**
-
-**4. CardiffNLP's** `twitter-roberta-base-sentiment-latest model`
-  - Built with Hugging Face’s `pipeline("text-classification")`
-
-**5. **BERT Mini** (`prajjwal1/bert-mini`)
-  - Built with Hugging Face's `AutoModelForSequenceClassification` and `AutoTokenizer`
-  - Fine-tune the model with training data
